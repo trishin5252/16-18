@@ -230,3 +230,27 @@ body {
         height: 150px;
     }
 }
+/* Исправляем базовое адаптивное изображение */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+}
+
+/* Исправляем контейнер для изображений */
+.image-container {
+    margin-bottom: 1.5rem;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    background: #f8fafc;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Убедимся что picture занимает всю ширину */
+picture {
+    display: block;
+    width: 100%;
+}
