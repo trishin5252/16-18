@@ -278,3 +278,30 @@ picture {
     display: block;
     width: 100%;
 }
+/* Исправляем выравнивание для всех image-container */
+.image-container {
+    margin-bottom: 1.5rem;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    background: #f8fafc;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center; /* Центрируем содержимое */
+}
+
+/* Убедимся что все responsive-image ведут себя одинаково */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    margin: 0 auto; /* Центрируем изображение */
+}
+
+/* Для picture тоже центрируем */
+picture {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
