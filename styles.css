@@ -351,3 +351,42 @@ picture {
     overflow: hidden;
     text-align: center; /* Только изображения центрируем */
 }
+
+/* Темная тема */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #e2e8f0;
+        --bg-color: #0f172a;
+        --border-color: #334155;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    .section, .header, .footer {
+        background: #1e293b;
+    }
+
+    .explanation {
+        background: #334155;
+    }
+
+    .object-fit-contain {
+        background: #475569;
+    }
+}
+
+/* Адаптивность для печати */
+@media print {
+    .section {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
