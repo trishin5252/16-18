@@ -147,3 +147,86 @@ body {
         font-size: 1.3rem;
     }
 }
+
+/* 5. Object-fit демонстрация */
+.object-fit-demo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.object-fit-item {
+    text-align: center;
+}
+
+.object-fit-item img {
+    width: 100%;
+    height: 200px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius);
+    margin-bottom: 0.5rem;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.object-fit-contain {
+    object-fit: contain;
+    background: #f1f5f9;
+}
+
+.object-fit-fill {
+    object-fit: fill;
+}
+
+/* 6. Адаптивная галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.gallery__item {
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.gallery__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.gallery__image:hover {
+    transform: scale(1.05);
+}
+
+/* Адаптивность для object-fit и галереи */
+@media (max-width: 768px) {
+    .object-fit-demo {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery__image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .object-fit-item img {
+        height: 150px;
+    }
+}
