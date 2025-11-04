@@ -114,3 +114,36 @@ body {
     box-shadow: var(--shadow);
     color: var(--text-light);
 }
+
+/* 4. Retina изображение */
+.retina-image {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header__title {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__title {
+        font-size: 1.5rem;
+    }
+    
+    .section__title {
+        font-size: 1.3rem;
+    }
+}

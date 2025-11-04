@@ -64,3 +64,43 @@
     </div>
 </body>
 </html>
+
+            <!-- Секция 3: Разные изображения для разных размеров экрана -->
+            <section class="section">
+                <h2 class="section__title">3. Разные изображения для разных экранов</h2>
+                <div class="image-container">
+                    <picture>
+                        <!-- Большое изображение для десктопов -->
+                        <source media="(min-width: 1200px)" srcset="images/wide-desktop.jpg">
+                        <!-- Среднее для планшетов -->
+                        <source media="(min-width: 768px)" srcset="images/tablet.jpg">
+                        <!-- Маленькое для мобильных -->
+                        <img src="images/mobile.jpg" alt="Адаптивное изображение для разных устройств" class="responsive-image">
+                    </picture>
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Десктопы: wide-desktop.jpg (1200px+)</li>
+                        <li>Планшеты: tablet.jpg (768px-1199px)</li>
+                        <li>Мобильные: mobile.jpg (до 767px)</li>
+                        <li>Браузер сам выбирает подходящее изображение</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Секция 4: Retina display поддержка -->
+            <section class="section">
+                <h2 class="section__title">4. Поддержка Retina дисплеев</h2>
+                <div class="image-container">
+                    <img src="images/icon@1x.png" srcset="images/icon@1x.png 1x, images/icon@2x.png 2x" alt="Иконка с поддержкой Retina" class="retina-image">
+                </div>
+                <div class="explanation">
+                    <h3>Что происходит:</h3>
+                    <ul>
+                        <li>Обычные экраны: icon@1x.png</li>
+                        <li>Retina экраны: icon@2x.png (в 2 раза четче)</li>
+                        <li>Автоматическое определение плотности пикселей</li>
+                    </ul>
+                </div>
+            </section>
